@@ -33,6 +33,16 @@ ASAICharacter::ASAICharacter()
 	TargetActorKey = "TargetActor";
 }
 
+void ASAICharacter::ShowHealthBar()
+{
+	ActiveHealthBar->AddToViewport();
+}
+
+void ASAICharacter::HideHealthBar()
+{
+	ActiveHealthBar->RemoveFromParent();
+}
+
 
 void ASAICharacter::PostInitializeComponents()
 {

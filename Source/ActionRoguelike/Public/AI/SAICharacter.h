@@ -23,9 +23,14 @@ public:
 	ASAICharacter();
 
 protected:
-
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, Category="HealthBar")
 	TObjectPtr<USWorldUserWidget> ActiveHealthBar;
+	
+	UFUNCTION(BlueprintCallable, Category = "HealthBar")
+	void ShowHealthBar();
+
+	UFUNCTION(BlueprintCallable, Category = "HealthBar")
+	void HideHealthBar();
 
 	UPROPERTY(EditDefaultsOnly, Category = "UI")
 	TSubclassOf<UUserWidget> HealthBarWidgetClass;
